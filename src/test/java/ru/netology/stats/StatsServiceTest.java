@@ -24,7 +24,7 @@ class StatsServiceTest {
 
         long actual = service.maxSales(sales);
 
-        long expected = 8;
+        long expected =8;
         assertEquals(expected, actual);
     }
 

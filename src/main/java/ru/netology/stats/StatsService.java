@@ -35,16 +35,16 @@ public class StatsService {
     }
 
     public long averageAmount(long[] sales) {
-        long averageAmount = salesAmount(sales)/sales.length;
+        long averageAmount = salesAmount(sales) / sales.length;
         return averageAmount;
     }
 
 
-
     public long worstSalesMonth(long[] sales) {
         int countMonth = 0;
+        long medial = averageAmount(sales);
         for (long sale : sales) {
-            if (sale < averageAmount(sales)) {
+            if (sale < medial) {
                 countMonth++;
             }
 
@@ -54,8 +54,9 @@ public class StatsService {
 
     public long bestSalesMonth(long[] sales) {
         int countMonth = 0;
+        long medial = averageAmount(sales);
         for (long sale : sales) {
-            if (sale > averageAmount(sales)) {
+            if (sale > medial) {
                 countMonth++;
             }
 
