@@ -53,22 +53,22 @@ class StatsServiceTest {
     @Test
     void worstSalesMonth() {
         StatsService service = new StatsService();
-        long[] sales = { 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18 };
+        long[] sales = { 8, 15, 13, 15, 17, 20, 19, 20, 7, 19, 14, 18 };
 
         long actual = service.worstSalesMonth(sales);
 
-        long expected = 5;
+        long expected = 4;
         assertEquals(expected, actual);
     }
 
     @Test
     void bestSalesMonth() {
         StatsService service = new StatsService();
-        long[] sales = { 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18 };
+        long[] sales = { 8, 15, 13, 15, 17, 20, 19, 20, 7, 19, 14, 18 };
 
         long actual = service.bestSalesMonth(sales);
 
-        long expected = 5;
+        long expected = 6;
         assertEquals(expected, actual);
     }
 }
